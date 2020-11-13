@@ -26,13 +26,6 @@ android {
     }
 
 }
-configurations {
-    api
-}
-task copyLibs(type: Copy) {
-    from configurations.api
-    into "libs"
-}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
