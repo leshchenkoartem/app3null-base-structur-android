@@ -10,13 +10,16 @@ import com.binding.mobile.databinding.FragmentFtestBinding
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class FtestFragment : BaseFragment<FtestViewState, FtestViewModel>() {
 
     private var _binding: FragmentFtestBinding? = null
     private val binding get() = _binding!!
 
-    private val viewModel: FtestViewModel by viewModel()
+    private val viewModel: FtestViewModel by viewModels()
 
 
     override fun onCreateView(
@@ -51,6 +54,6 @@ class FtestFragment : BaseFragment<FtestViewState, FtestViewModel>() {
     }
 
     override fun renderView(savedInstanceState: Bundle?) {
-
+        viewModel.testFunction()
     }
 }
