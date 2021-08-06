@@ -3,10 +3,11 @@ package com.app3null.basestructure.preferences
 import android.content.SharedPreferences
 import com.f2prateek.rx.preferences2.RxSharedPreferences
 import io.reactivex.Observable
+import javax.inject.Inject
 
 
 class PreferencesImpl
-constructor(private val sharedPreferences: SharedPreferences) : Preferences {
+@Inject constructor(private val sharedPreferences: SharedPreferences) : Preferences {
 
     private val rxSharedPreferences: RxSharedPreferences = RxSharedPreferences.create(sharedPreferences)
     private val editor: SharedPreferences.Editor = this.sharedPreferences.edit()
