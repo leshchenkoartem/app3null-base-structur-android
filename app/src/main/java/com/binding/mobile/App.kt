@@ -1,11 +1,11 @@
 package com.binding.mobile
 
-import com.binding.mobile.diModules.localStorageModule
-import com.binding.mobile.diModules.repositoryModule
-import com.binding.mobile.diModules.useCasesModule
-import com.binding.mobile.diModules.viewModelsModule
-import com.app3null.basestructure.app.MvvmApplication
-import org.koin.core.module.Module
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 
-class App: MvvmApplication() {
+@HiltAndroidApp
+class App : Application() {
+    override fun onCreate() {
+        super.onCreate()
+    }
 }
